@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better Spectrum Dark Theme
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.0.5
+// @version        2.0.6
 // @description    This extension changes the appearance of Spectrum and some RSI web pages. You must have the dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -353,22 +353,31 @@
 		.theme-dark .message-item>.content>.top .member-name span.displayname,
 		.theme-dark .forum-thread-item>.content .content-header .left .forum-thread-time-created,
 		.theme-dark .forum-thread-item>.content .content-header .left>.forum-thread-member-info span.displayname,
-		[data-orion-skin] .a-productHomeProductLogo svg,
 		[data-orion-skin].a-productHomeProductLogo svg{
 			color: #ddedf7!important;
 			fill: #ddedf7!important;
 		}
 
+		/* Normalfall: Standardfarbe für .forum-thread-subject */
+		.theme-dark .forum-thread-item .content .forum-thread-subject {
+			color: #ddedf7 !important;
+		}
+
+		/* Highlighted-Fall: Gelb, wenn .forum-thread-item die Klasse .is-highlighted-staff hat */
+		.theme-dark .forum-thread-item.is-highlighted-staff .content .forum-thread-subject {
+			color: rgb(239, 191, 96) !important;
+		}
+
+		/* Weitere Elemente mit Highlight-Farbe */
 		a.thread-subject[style],
 		span.displayname[style],
 		.c-sidebar-header__avatar--away,
 		.theme-dark .member-presence.away use,
 		#sidebar .member-presence-menu-button.away,
 		.theme-dark .sidebar-list .sidebar-item>.column.notification>.count,
-		.theme-dark .sidebar-list .sidebar-item>.column.notification>.unread-flag,
-		.theme-dark .forum-thread-item>.content .forum-thread-subject {
-			color: rgb(239 191 96) !important;
-			fill: rgb(239 191 96) !important;
+		.theme-dark .sidebar-list .sidebar-item>.column.notification>.unread-flag {
+			color: rgb(239, 191, 96) !important;
+			fill: rgb(239, 191, 96) !important;
 		}
 		/* Colors end */
 
