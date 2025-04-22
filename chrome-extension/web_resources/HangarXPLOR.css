@@ -1,0 +1,109 @@
+/* Extension: Star Citizen HangarXPLOR */
+/* https://chrome.google.com/webstore/detail/star-citizen-hangar-xplor/bhkgemjdepodofcnmekdobmmbifemhkc */
+
+.js-bulk-ui,
+.js-bulk-ui .inner {
+	border: 0px;
+    background: #081523;
+}
+.wrapper .js-bulk-ui .content-block1 {
+    padding: 20px 20px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-block1>.corner.corner-top-right,
+.content-block1>.corner.corner-bottom-right {
+	display: none;
+}
+
+.js-bulk-ui {
+	margin-left: 0px;
+	top: 193px !important;
+	bottom: 0;
+	background: rgb(5 17 29);
+}
+
+.js-bulk-ui .value .label,
+.js-bulk-ui .value .label-short {
+	width: auto;
+	padding-left: 0;
+	text-align: center;
+	display: block;
+	font-family: inherit;
+	font-size: .9em;
+	text-transform: none;
+}
+.js-bulk-ui.count .count .amount,
+.js-bulk-ui.count .count .label-short,
+.js-bulk-ui.count .count .label {
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 15px;
+}
+
+.js-bulk-ui .value .amount {
+	display: block;
+	text-align: center;
+	font-weight: 900;
+	font-size: 1em;
+}
+
+.js-bulk-ui.cash .actions,
+.js-bulk-ui.count .actions {
+	margin-left: 10px !important;
+}
+
+.js-bulk-ui.cash .actions,
+.js-bulk-ui.count .actions {
+	display: flex;
+    justify-items: start;
+    flex-direction: column;
+}
+
+.js-bulk-ui .actions a {
+	margin-top: 0;
+	margin-left: 0;
+}
+
+a.shadow-button {
+	font-family: inherit;
+}
+
+.js-bulk-ui .value {
+	text-align: center;
+}
+
+
+.js-bulk-ui.count .count .label-short {
+	margin-right: 10px;
+}
+
+.date-col.melt-col label::after {
+	content: ":";
+}
+
+.date-col.melt-col label {
+	margin-right: 5px;
+}
+
+#billing.pledges .items-col.pledge-col label:after,
+.date-col.melt-col label::after {
+	content: ": ";
+	margin-right: 5px;
+}
+
+.js-custom-controls .controls.js-custom-search-wrapper {
+	margin: -10px 0px 0px 0px;
+}
+
+.pager .selectlist,
+.controls .selectlist {
+	width: 150px;
+}
+#billing .status-selector .tag,
+#billing .status-selector .tag .tag-content,
+#billing .status-selector .tag .tag-content .text{
+	cursor: pointer;
+}

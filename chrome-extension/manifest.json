@@ -1,0 +1,54 @@
+{
+	"manifest_version": 3,
+	"name":             "__MSG_name__",
+	"description":      "__MSG_description__",
+	"default_locale":   "de",
+	"short_name":       "SpectrumDark",
+	"version":          "2.0.4",
+	"author":           "Rene Jansen",
+	"permissions": ["storage", "tabs"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": 
+		{
+			"default_icon": {
+			 "128": "icons/icon_128-fill.png",
+			 "48": "icons/icon_48-fill.png"
+		},
+		"default_popup": "ui_resources/SpectrumDark.Settings.html"
+	},
+   
+	"content_scripts": [
+		{
+			"js": [ "content_scripts/loader.js", "content_scripts/content.js" ],
+			"matches": [ "https://robertsspaceindustries.com/*", "https://developertracker.com/*" ]
+		}
+	],
+   
+   "icons": 
+	   {
+			"128": "icons/icon_128-fill.png",
+			"48": "icons/icon_48-fill.png"
+	   },
+   
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   
+   "web_accessible_resources": [
+	   {
+		  "resources": [
+			"web_resources/SpectrumDark.css",
+			"web_resources/HangarXPLOR.css",
+			"web_resources/Newgallery.css",
+			"web_resources/DevTracker.css",
+			"web_resources/fuse-min.js",
+			"web_resources/shims.chrome.storage.js",
+			"web_resources/rsi_website_neu.css",
+			"debug/*.html"
+		  ],
+		  "matches": [
+			"https://robertsspaceindustries.com/*", "https://developertracker.com/*"
+		  ]
+	   }
+  ]
+}

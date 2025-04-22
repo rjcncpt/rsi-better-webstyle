@@ -1,0 +1,643 @@
+/* RSI Start page */
+
+/* Header */
+[data-orion-skin] .o-navigationHead,
+[data-orion-skin].o-navigationHead,
+[data-orion-skin] .m-breadcrumb{
+	background: rgb(21 31 46);
+}
+#react {
+    border-color: #151f2e;
+}
+
+/* Notification */
+.l-notification-bar {
+	width: 30%;
+	position: fixed;
+	bottom: 0;
+	left: calc(-100px + -22%);
+}
+
+.l-notification-bar:hover {
+	left: 0;
+	transition: left 0.3s ease-in-out;
+}
+
+.l-notification-bar:not(:hover) {
+	left: calc(-100px + -22%);
+	transition: left 0.3s ease-in-out;
+}
+.c-notification__button {
+	color: #fff;
+}
+
+@media only screen and (max-width:1400px) {
+	.c-notification__inner {
+		padding: 0 40px 0 40px;
+	}
+}
+
+@media only screen and (max-width:1023px) {
+	.l-notification-bar {
+		width: 100%;
+		left: 0;
+		bottom: 0px !important;
+	}
+
+	.c-notification__inner {
+		padding: 0 40px 0 40px;
+	}
+}
+
+@media only screen and (max-width:500px) {
+	.c-notification__inner {
+		padding: 0 40px 0 40px;
+	}
+}
+
+.c-notification__inner {
+	padding: 25px 34px 25px 35px;
+	display: block;
+	width: 100%;
+}
+
+.c-notification__content,
+.c-notification__actions {
+	display: flex;
+	width: 100%;
+}
+
+.c-notification__content {
+	margin-bottom: 15px
+}
+
+.c-notification__actions {
+	justify-content: flex-start;
+}
+
+.c-notification__message {
+	color: #d2f0ff;
+}
+
+[data-orion-skin] .m-navigationSubBlock.-use2Columns, [data-orion-skin].m-navigationSubBlock.-use2Columns {
+    width: max-content;
+}
+[data-orion-skin] .m-navigationSubBlock__content, [data-orion-skin].m-navigationSubBlock__content {
+    gap: 5px;
+    margin-top: 10px;
+}
+[data-orion-skin] .m-navigationSubItem, [data-orion-skin].m-navigationSubItem {
+    background-color: rgb(25 68 95);
+    padding: 20px;
+    border-radius: 10px;
+}
+[data-orion-skin] .m-navigationSubItem__description, [data-orion-skin].m-navigationSubItem__description {
+    color: rgb(158 196 219);
+}
+
+/* Notification */
+
+/* Profil box */
+[data-orion-skin] .orion-beta-c-box.-background-surface_0,
+[data-orion-skin].orion-beta-c-box.-background-surface_0{
+	background-color: #0b111a;
+}
+[data-orion-skin] .accountPanelUser__svg,
+[data-orion-skin].accountPanelUser__svg,
+[data-orion-skin] .accountPanelUser,
+[data-orion-skin].accountPanelUser{
+	color: rgb(21 31 46);
+	--account-panel-background-color: rgb(21 31 46);
+}
+[data-orion-skin] .a-fontStyle.-body-4{
+	font-size: inherit;
+}
+/* Profil box */
+
+/* Avatar */
+.a-avatarButton__image.a-avatarImage,
+[data-orion-skin] .orion-c-avatar__wrapper,
+[data-orion-skin] .orion-c-avatar__image{
+    border: 3px solid #2d587d;
+}
+.a-avatarButton__image.a-avatarImage,
+[data-orion-skin] .orion-c-avatar__wrapper,
+[data-orion-skin] .orion-c-avatar__image,
+.account-profile .overview-content .thumb img,
+.account-profile .overview-content .thumb{
+    border-radius: 50% !important;
+}
+[data-orion-skin] .orion-c-avatar__wrapper::after {
+    border: 0;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas{
+	justify-content: center;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-avatar,
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-badge {
+    border-radius: 50%;
+    border: 0;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-badge {
+	width: auto;
+}
+/* Avatar */
+
+/* Navigation */
+[data-orion-skin] .o-navigationBar,
+[data-orion-skin].o-navigationBar {
+    background: rgb(21 31 46);
+}
+.o-navigationBar__siblings {
+    display: none;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-credits {
+    zoom: 1.2;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-displayname {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-handle {
+    font-size: 1em;
+}
+.a-fontStyle.-heading-7,
+.m-navigationSubBlock__title {
+    font-size: 1.2em !important;
+}
+.a-button.-interaction {
+    --_button-text-color-default: rgb(255 255 255) !important;
+}
+[data-orion-skin] .m-closeableNavigationButton{
+	margin-right: 10px;
+}
+/* Navigation */
+
+/* Pledge Store */
+.RSIStoreTheme .BrowseFilter .BrowseFilter__filters {
+    background: #16191d;
+    margin-top: 7px;
+}
+@container shipCardStack (width >= 888px) {
+    [data-orion-skin] .c-shipCardStack__grid {
+        grid-template-columns: repeat(auto-fill, minmax(calc(25% - var(--_shipCardStack-gap)), 1fr));
+    }
+}
+@container shipCardInformation (width < 500px) {
+    [data-orion-skin] .a-shipCardInformation__container {
+        flex-direction: column;
+        gap: var(--orion-layout-spacing-0125);
+        min-height: 70px;
+    }
+}
+[data-orion-skin] .a-shipCardManufacturer__curve {
+    margin-right: -1px;
+}
+.a-fontStyle.-button-2 {
+    font-size: 1em;
+}
+[data-orion-skin] .m-inputBase__input input,
+[data-orion-skin] .m-inputBase__input textarea,
+[data-orion-skin] .m-inputBase__input select,
+[data-orion-skin] .m-inputBase__input .m-inputBase__content {
+    font-size: .9em;
+}
+.RSIStoreTheme div.ShipItem .ShipItem-general-information-name-prefix,
+h3.ShipItem-title br{
+	display:none;
+}
+.RSIStoreTheme div.ShipItem .ShipItem-general-information-focus{
+	margin-top:0;
+}
+.RSIStoreTheme div.ShipItem .ShipItem-general-information{
+	align-items: flex-start;
+	align-content:flex-start;
+	justify-content: center;
+	margin-top:10px;
+}
+.RSIStoreTheme div.ShipItem .ShipItem-general-information-flyable-status{
+	margin:0;
+}
+[data-orion-skin] .m-subNavigationBarItem.-variant-regular,
+[data-orion-skin].m-subNavigationBarItem.-variant-regular{
+    height: inherit!important;
+}
+@container shipsGrid (width >= 888px) {
+    [data-orion-skin] .o-shipsGrid__filterWrapper, [data-orion-skin].o-shipsGrid__filterWrapper {
+        top: calc(150px + var(--orion-navigation-bar-height));
+    }
+}
+/* Pledge Store */
+
+/* REFERRAL PAGE */
+/* Zoom 90% */
+#settings.referral-program .referral-rank-wrapper .reward,
+#settings.referral-program .referral-rank-wrapper .rank .badge,
+#settings.referral-program .referral-rank-wrapper .rank .progress {
+	zoom: 90%;
+}
+/* Zoom 90% end */
+
+
+.wrapper .content-block1 {
+	padding: 40px;
+}
+
+#settings.referral-program .block-head,
+.corner.corner-top-left,
+.corner.corner-top-right,
+.corner.corner-bottom-left,
+.corner.corner-bottom-right,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row:before {
+	display: none;
+}
+
+#settings.referral-program #users-list {
+	display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+#settings.referral-program #users-list > div {
+	flex: 1 0 calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+#settings.referral-program .referral-rank-wrapper,
+#settings.referral-program .recruits-list-wrapper {
+	padding: 0;
+	background: none;
+}
+
+#settings.referral-program .referral-rank-wrapper {
+	background-color: rgb(12 27 43) !important;
+	;
+	padding: 20px 0px 30px !important;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#settings.referral-program .referral-rank-wrapper .rank .progress {
+	height: auto;
+	margin-top: 5%;
+	margin-left: 10px;
+}
+
+#settings.referral-program .referral-rank-wrapper .rank .progress .bar .percent span {
+	box-shadow: none;
+}
+
+#settings.referral-program h4 {
+	margin: 0 0 14px;
+}
+
+#settings.referral-program .rank h4:before {
+	content: "Your rank: ";
+}
+
+#settings.referral-program .referral-rank-wrapper .reward h4 {
+	font-size: 1.2em;
+	padding: 0 0 9px;
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#settings.referral-program .referral-rank-wrapper .rank .badge {
+	background: rgba(0, 200, 255, .05);
+}
+
+#settings.referral-program .referral-rank-wrapper .rank .progress .ranking {
+	margin-top: -15px;
+	bottom: auto;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .avatar {
+	margin-right: 10px;
+	border: none;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row {
+	padding: 7px 0 7px 0px !important;
+}
+
+#settings.referral-program .referral-rank-wrapper .reward .desc {
+	margin-top: 14px;
+	font-size: 1em;
+}
+
+#settings.referral-program form#share-referral-form input {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-weight: 700;
+}
+
+#settings.referral-program form#share-referral-form label {
+	font-size: 1em;
+}
+
+#settings.referral-program .recruits-list-wrapper form#recruits-list-form a,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .user {
+	font-size: .9em;
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .user span {
+	font-weight: 400;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .status {
+	top: 35%;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child {
+	padding-top: 7px;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row {
+	padding: 7px 0 7px 15px;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child::before,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row::before {
+	top: 7px;
+}
+
+#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row {
+	height: 75px;
+}
+
+#settings.referral-program .recruits-list-wrapper form#recruits-list-form a:first-child {
+	margin: 0 10px 12px 0;
+}
+
+#settings.referral-program .recruits-list-wrapper form#recruits-list-form a:first-child::before {
+	height: 24px;
+}
+
+#settings.referral-program p {
+	font-size: .85em;
+	line-height: 2em;
+	color: #6d7e8f;
+}
+
+#settings.referral-program .referral-rank-wrapper .reward img {
+	height: auto;
+}
+
+#referral .referral-share p {
+	font-size: 1em;
+}
+
+#referral .description {
+	width: auto;
+}
+
+#referral .description .block {
+	width: 300px;
+}
+
+#referral .description .block .title {
+	font: bold 1.2em "Orbitron";
+}
+
+#referral .description .block p {
+	text-align: center;
+}
+
+#referral p.recruitment {
+	font-size: 1em;
+}
+
+#referral .table .rows .row .infos {
+	padding-top: 4px;
+	color: #73b1cb;
+}
+
+#referral .table .rows .row .grade {
+	width: 200px;
+}
+
+#referral .table .rows .row .icon {
+	width: 110px;
+}
+
+#referral .table .table-header.rewards .empty,
+#referral .table .table-header.ranks .empty {
+	background: #05111d;
+}
+
+#referral .table .table-header.ranks .label:before,
+#referral .table .table-header.rewards .label:before {
+	border-color: transparent transparent rgb(0 0 0 / 0%) transparent;
+}
+
+#referral .leaderboard-table {
+	width: 840px;
+	border: 0px solid #0b6096;
+	background: none;
+}
+
+#referral .leaderboard-table .leaderboard-row.top-row {
+	background-color: #054266;
+}
+
+#referral .leaderboard-table .leaderboard-row {
+	height: 100px;
+}
+
+#referral .leaderboard-table .leaderboard-row:not(:last-child) {
+	border-bottom: 1px solid #06314b;
+	margin-bottom: 10px;
+}
+
+#referral .leaderboard-table .leaderboard-row.top-row {
+	box-shadow: 0 0 30px 0 rgb(26 140 255 / 0%), 0 0 30px 0 rgb(26 140 255 / 18%);
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-rank {
+	padding-top: 0px;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-cell:not(:last-child) {
+	border-right: 0px solid #06314b;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-displayname {
+	font-weight: 800;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-displayname {
+	font-size: 1em;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-nickname,
+#referral .leaderboard-table .leaderboard-row .leaderboard-referrals .referrals-unit {
+	font-size: 1em;
+	color: #73b1cb;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-referrals .referrals-count {
+	font-size: 1.5em;
+	font-weight: 800;
+}
+
+#referral .leaderboard-table .leaderboard-row .leaderboard-rank.top-rank {
+	background-position: center 50%;
+}
+
+#settings.ptu .ptucard p h3 {
+	margin: 1.5em 0 0 0;
+}
+
+#settings.ptu .ptucard p,
+#settings .inner-content .top>p,
+#billing .inner-content .top>p,
+#subscribers .inner-content .top>p {
+	font-size: .9em;
+	color: #ffffff;
+}
+/* REFERRAL PAGE end */
+
+/* Roadmap Release View */
+.gtqzZI {
+	line-height: inherit;
+}
+
+.enkTcq {
+	padding: 5px 80px 0px 0px;
+}
+
+.cEDkBB svg {
+	rotate: 270deg;
+}
+
+.iBUFAA {
+	padding: 1px 10px;
+}
+
+.dDNykc {
+	background-color: rgb(189 146 54 / 75%);
+}
+
+.gzfXtH {
+    background-color: rgb(71 131 64);
+    color: rgb(255 255 255);
+}
+
+.guFEco {
+	background: rgb(6 48 77);
+}
+
+.eoMxzt {
+	background-color: rgb(0 41 69);
+}
+
+.hXHxeU {
+	background-image: none;
+	background-color: #05111d;
+}
+
+.gyhYfJ {
+	margin: auto;
+	border-radius: 10px;
+	width: 90%;
+}
+
+.gyhYfJ,
+.iqyNJj {
+	filter: none;
+	--media-filter: none;
+}
+
+.edIkVN {
+	background-color: #151f2e;
+}
+
+.edIkVN,
+.eoMxzt {
+	width: 380px;
+}
+
+.gUDugF,
+.layaUB,
+.gDRwwd,
+.jrGvGl,
+.eoMxzt .layaUB {
+	background-color: rgb(32 45 65);
+	border: 0;
+}
+
+.edIkVN .jmUWOw,
+.edIkVN .cBVlkA,
+.edIkVN .fvCukO,
+.edIkVN .feUlHA {
+	border: 0;
+	background-color: rgb(32 45 65);
+}
+.feUlHA,
+.fvCukO {
+	margin-top: -4px;
+	width: 347px;
+	border-radius:10px;
+}
+.eoMxzt .jmUWOw,
+.eoMxzt .cBVlkA,
+.eoMxzt .fvCukO {
+	border: 0;
+	background-color: rgb(15 65 99);
+}
+
+.edIkVN .guFEco {
+	background: rgb(24 28 30);
+}
+.eoMxzt .guFEco {
+	background: rgb(6 48 77);
+}
+
+.iuhXsP {
+	padding-left: 10px;
+}
+
+.iLbqJB {
+	border-right: 5px solid rgb(75 166 222);
+}
+
+.gdkTeu {
+	background: rgb(24 28 30);
+	color: rgb(214 229 235);
+}
+
+.gQsLHY,
+.cVqGvX {
+    color: rgb(186, 193, 197);
+}
+.ifddtC::before,
+.iqyNJj::before {
+    background-color: rgb(5 17 29);
+}
+.ifddtC,
+.iqyNJj {
+    --color-secondary: rgb(24 34 49);
+}
+.fbdFND {
+    background-color: rgb(32 45 65);
+}
+.eRqdlz {
+    background-color: rgb(189 146 54 / 75%);
+	color:#fff;
+}
+.iSJsDE {
+    background-color: rgb(71 131 64);
+	color:#fff;
+}
+.dlSnfY,
+.bVMmCL {
+    border: 0;
+}
+/* Roadmap Release View end */
