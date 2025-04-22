@@ -1318,7 +1318,8 @@
 				height: 1px;
 				width: 1px;
 			}
-			#page.forum-channel .row .column.last-activity{
+			#page.forum-channel .row .column.last-activity,
+			.theme-dark #page.forum-channel .row.columns-header{
 				display:none;
 			}
 		}
