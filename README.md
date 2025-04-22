@@ -1,5 +1,7 @@
 # RSI Better Webstyle
 
+![image](https://www.sc-deutsch-launcher.de/apps/rsi-better-webstyle/rsi-better-webstyle01.png)
+
 ## Tampermonkey Installation
 1. Go to the website [https://www.sc-deutsch-launcher.de/apps/rsi-better-webstyle/tampermonkey.html](https://www.sc-deutsch-launcher.de/apps/rsi-better-webstyle/tampermonkey.html).
 2. Click on “Copy to Clipboard”.<br>
