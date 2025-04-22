@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better Spectrum Dark Theme
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.0.6
+// @version        2.0.6a
 // @description    This extension changes the appearance of Spectrum and some RSI web pages. You must have the dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -353,7 +353,9 @@
 		.theme-dark .message-item>.content>.top .member-name span.displayname,
 		.theme-dark .forum-thread-item>.content .content-header .left .forum-thread-time-created,
 		.theme-dark .forum-thread-item>.content .content-header .left>.forum-thread-member-info span.displayname,
-		[data-orion-skin].a-productHomeProductLogo svg{
+		[data-orion-skin].a-productHomeProductLogo svg,
+		.breadcrumb.mobile-only a.breadcrumb-link,
+		.breadcrumb.mobile-only a.breadcrumb-link .separator use{
 			color: #ddedf7!important;
 			fill: #ddedf7!important;
 		}
@@ -519,6 +521,12 @@
 		.c-annotation-block__icon {
 			border-right: 0;
 			margin-right: 0px;
+		}
+		.breadcrumb.mobile-only a.breadcrumb-link{
+			background: #1d5577;
+			border-radius: 5px;
+			padding: 5px;
+			font-size: .8em;
 		}
 		/* buttons, reactions, icons */
 
@@ -1310,6 +1318,9 @@
 		}
 
 		@media only screen and (max-width:500px) {
+			#page.forum-thread #page-main .page-content .forum-thread-subject{
+				line-height: 1.2em;
+			}
 			.theme-dark .content-block:not(.text) {
 				width: 98%;
 			}
@@ -1329,13 +1340,34 @@
 			}
 			#page.forum-channel .row .column.last-activity,
 			.theme-dark #page.forum-channel .row.columns-header,
-			.theme-dark #page.forum-channel .row.thread .column.type{
+			.theme-dark #page.forum-channel .row.thread .column.type,
+			#page.forum-channel .channel-header .actions .sort-selector>.label{
 				display:none;
+			}
+			#page.forum-channel .channel-header .actions{
+				align-items: flex-start;
+				margin: 20px 0 0 -3px;
+			}
+			#page.forum-channel .row{
+				align-items: flex-start;
+			}
+			#app #app-content #page .breadcrumb.mobile-only .trail {
+				border-bottom: 1px solid #1a2638;
 			}
 			.theme-dark #page.forum-channel .row .column.subject .subject-media-preview {
 				background: transparent;
 				align-self: start;
 				margin-top: 3px;
+			}
+			[data-orion-skin] .m-closeableNavigationButton{
+				margin-right: 6px!important;
+			}
+			#page.forum-thread #page-main .page-content .forum-thread-item .content-header>.left{
+				align-items: center;
+				padding-right: 0px;
+			}
+			.forum-thread-item>.content .content-header{
+				width: max-content!important;
 			}
 		}
 
