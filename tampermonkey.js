@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better Spectrum Dark Theme
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.0.6.1
+// @version        2.0.6.2
 // @description    This extension changes the appearance of Spectrum and some RSI web pages. You must have the dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -1341,7 +1341,8 @@
 			#page.forum-channel .row .column.last-activity,
 			.theme-dark #page.forum-channel .row.columns-header,
 			.theme-dark #page.forum-channel .row.thread .column.type,
-			#page.forum-channel .channel-header .actions .sort-selector>.label{
+			#page.forum-channel .channel-header .actions .sort-selector>.label,
+			#page.forum-thread #page-main .page-content .forum-thread-item.style-type-small .content-header>.left>.forum-thread-member-info>.member-profile-openable>.member-name>.nickname{
 				display:none;
 			}
 			#page.forum-channel .channel-header .actions{
@@ -1363,11 +1364,21 @@
 				margin-right: 6px!important;
 			}
 			#page.forum-thread #page-main .page-content .forum-thread-item .content-header>.left{
-				align-items: center;
+				align-items: self-start!important;
 				padding-right: 0px;
 			}
 			.forum-thread-item>.content .content-header{
-				width: max-content!important;
+				width: -webkit-fill-available!important;
+				padding-right: 0px;
+			}
+			#page.forum-thread #page-main .page-content .forum-thread-item.style-type-small .mobile-header{
+				margin-left: 108px;
+				margin-top: -30px;
+			}
+			.forum-thread-item>.content .content-header>.left>.forum-thread-member-info .member-name{
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 10px;
 			}
 		}
 
