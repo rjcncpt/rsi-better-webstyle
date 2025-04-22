@@ -1326,8 +1326,15 @@ button.bookmark>svg>use,{
 		height: 20px;
 		width: 20px;
 	}
-	#page.forum-channel .row .column.last-activity{
+	#page.forum-channel .row .column.last-activity,
+	.theme-dark #page.forum-channel .row.columns-header,
+	.theme-dark #page.forum-channel .row.thread .column.type{
 		display:none;
+	}
+	.theme-dark #page.forum-channel .row .column.subject .subject-media-preview {
+		background: transparent;
+		align-self: start;
+		margin-top: 3px;
 	}
 }
 
