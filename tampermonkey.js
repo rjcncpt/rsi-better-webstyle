@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better Spectrum Dark Theme
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.0.6a
+// @version        2.0.6.1
 // @description    This extension changes the appearance of Spectrum and some RSI web pages. You must have the dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
