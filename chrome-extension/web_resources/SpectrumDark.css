@@ -42,7 +42,7 @@
 }
 
 /* Backgrounds */
-.theme-dark#app #app-header,
+#app.theme-dark #app-header,
 .theme-dark #page #page-main .page-header .page-header-inner .actions .action.on {
 	background: #335a8f;
 }
@@ -53,11 +53,11 @@
 .theme-dark .forum-thread-item.is-editor-reply,
 .theme-dark .member-profile .profile-below-banner,
 .theme-dark #app-content #page.search #page-main .search-results,
-.theme-dark #app.theme-dark #app-content #page.lobby #page-main .messages-list,
+#app.theme-dark #app-content #page.lobby #page-main .messages-list,
 .theme-dark #app-content>#page.community>#page-main .community-list,
 .theme-dark .lobby-member-presences>.members-list .members-list-group .members-list-group-header,
-.theme-dark #app.theme-dark #app-content .quick-access .lobby-member-presences,
-.theme-dark #app.theme-dark #app-content .quick-access .lobby-member-presences .search,
+#app.theme-dark #app-content .quick-access .lobby-member-presences,
+#app.theme-dark #app-content .quick-access .lobby-member-presences .search,
 .theme-dark .quick-access-friend-request,
 .theme-dark #app-content #page.search #page-main .search-sidebar,
 .theme-dark #search-results .results-list,
@@ -75,9 +75,9 @@
 .theme-dark .forum-thread-item-tracked-reference,
 .theme-dark #page.forum-channel .row.columns-header,
 .theme-dark .search-panel .quick-access-header-input input,
-.theme-dark #app.theme-dark #app-content #page.lobby .lobby-footer>.top,
-.theme-dark #app.theme-dark #app-content #page.lobby #page-main .lobby-header,
-.theme-dark #app.theme-dark #app-content #page.lobby .lobby-footer>.message-input,
+#app.theme-dark #app-content #page.lobby .lobby-footer>.top,
+#app.theme-dark #app-content #page.lobby #page-main .lobby-header,
+#app.theme-dark #app-content #page.lobby .lobby-footer>.message-input,
 .theme-dark .list-navigator .widgets .navigation .navigation-content,
 .theme-dark .list-navigator .widgets .navigation .left-triangle:before,
 .theme-dark .emoji-mart .emoji-mart-scroll .emoji-mart-category .emoji-mart-category-label *,
@@ -100,9 +100,9 @@
 	background: #101723;
 }
 
-.theme-dark #app,
+#app.theme-dark,
 .theme-dark #react,
-.theme-dark #app #app-content,
+#app.theme-dark #app-content,
 .theme-dark pre,
 .theme-dark .message-media-rich,
 .theme-dark .quick-access-header,
@@ -141,13 +141,13 @@
 	background-color: rgba(11, 17, 26, .5);
 }
 
-.theme-dark #app,
+#app.theme-dark,
 .theme-dark #react,
 .theme-dark #app-content #page.settings #page-main .settings-main .settings-content,
 .theme-dark .c-sidebar-private-messages-search__input,
 .theme-dark .c-sidebar-private-messages-search__input:focus,
 .theme-dark #page.forum-channel .row,
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item,
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item,
 .theme-dark .page-search-results #search-results .results-list > div,
 .theme-dark .page-search-results #search-results .results-list > a{
 	background: #101824;
@@ -182,7 +182,7 @@
 	background-color: #243753;
 }
 
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted {
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted {
 	background: #1a2535;
 }
 .theme-dark .lobby-message__wrapper {
@@ -212,7 +212,7 @@
 .theme-dark #page.forum-channel .row:not(:last-child),
 .theme-dark #page #page-main .page-header .page-header-inner,
 .theme-dark .forum-thread-item.style-type-small:not(.depth-0),
-.theme-dark #app.theme-dark #app-content #page.lobby #page-main .lobby-header,
+#app.theme-dark #app-content #page.lobby #page-main .lobby-header,
 .theme-dark .list-navigator .widgets .navigation .left-triangle:before,
 .theme-dark .member-avatar .avatar-badges .avatar-badge:not(:last-child),
 .theme-dark .forum-thread-item>.content .content-footer>.actions>.group,
@@ -309,7 +309,7 @@ button.select.active,
 .theme-dark .lobby-message__dismiss {
 	border-color:#203f6f;
 }
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted,
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted,
 .theme-dark #page.forum-thread .page-content .forum-thread .forum-thread-replies .forum-thread-item.is-highlighted-staff {
 	border-left-color:#efbf60;
 }
@@ -387,7 +387,7 @@ button.vote .count,
 .theme-dark .sidebar-list .sidebar-item>.column.content>a,
 .theme-dark #page.forum-channel .row.columns-header .column,
 .theme-dark #page.forum-channel .row.thread .column.stats .count,
-.theme-dark #app.theme-dark #app-content .quick-access .lobby-member-presences>.members-list .lobby-presence-item .member-name,
+#app.theme-dark #app-content .quick-access .lobby-member-presences>.members-list .lobby-presence-item .member-name,
 .theme-dark #app-content>#page.community>#page-main .community-list ul .community-item .default-link .description,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-details strong,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-details .item-text,
@@ -520,7 +520,7 @@ div.button-group-selector button,
 	color: #ddddd1;
 }
 
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted .reaction {
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted .reaction {
 	background-color: #0a1525;
 	border-color: #4c80b7;
 }
@@ -530,7 +530,7 @@ div.button-group-selector button,
 	padding: 30px 25px 30px 25px;
 }
 
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted .reaction.active {
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted .reaction.active {
 	border-color: #4c80b7;
 	background-color: #223c63;
 }
@@ -1009,11 +1009,11 @@ blockquote {
 	margin: -15px 10px 0px 10px;
 }
 
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted .theme-dark .reaction {
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted .theme-dark .reaction {
 	background-color: #0d151e;
 }
 
-.theme-dark #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted .theme-dark .reaction.active {
+#app.theme-dark #app-content #page.lobby #page-main .messages-list .message-item.highlighted .theme-dark .reaction.active {
 	background-color: #2a4167;
 }
 
@@ -1124,7 +1124,7 @@ blockquote {
 .theme-dark .notification-subscription>button>svg>use{
     stroke: #6b88b0;
 }
-button.bookmark>svg>use,{
+button.bookmark>svg>use{
 	stroke-width: 3px;
 }
 
