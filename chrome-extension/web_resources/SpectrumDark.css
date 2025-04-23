@@ -1,7 +1,7 @@
 /*
-@name           Star Citizen - Better Spectrum Dark Theme
+@name           Star Citizen - Better dark RSI webstyle
 @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-@description    This extension changes the appearance of Spectrum and some RSI web pages. You must have the dark mode enabled.
+@description    This Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 @author         rjcncpt
 @license        CC0-1.0 License
 */
@@ -9,20 +9,14 @@
 /* Change page width for better readability at large monitor resolution */
 
 @media only screen and (max-width: 1920px) {
-  .theme-dark#app,
-  [data-orion-skin] .a-grid__inside{
-    width: 100% !important;
-  }
-  [data-orion-skin] .a-grid__inside {
-    padding-inline: 10px;
-  }
+	.theme-dark#app,
+	[data-orion-skin] .a-grid__inside{
+		width: 100% !important;
+	}
+	[data-orion-skin] .a-grid__inside {
+		padding-inline: 10px;
+	}
 }
-
-.theme-dark .content-block:not(.text) {
-	/*zoom:83.7%;*/
-}
-
-/* Change page width for better readability at large monitor resolution end */
 
 /* Custom CSS */
 ::selection {
@@ -460,6 +454,10 @@ div.button-group-selector button,
 	color: #ddddd1;
 }
 
+#app #app-content #page.lobby #page-main .messages-list .message-item{
+	padding-left:15px;
+	padding-right:15px;
+}
 #app #app-content #page.lobby #page-main .messages-list .message-item.highlighted .reaction {
 	border-color: #4c80b7;
 	background-color: #0a1525;
@@ -935,9 +933,14 @@ blockquote {
 	border-left: 5px solid #efbf60;
 	padding: 30px 25px 30px 25px;
 }
-
+.message-item>.content{
+	margin-bottom: 10px;
+}
+#app #app-content #page.lobby #page-main .messages-list .message-item{
+	padding: 15px 25px 5px 25px;
+}
 #app #app-content #page.lobby #page-main .messages-list .message-item.type-small {
-	padding: 0px 25px 15px 25px;
+	padding: 0px 25px 5px 25px;
 }
 #app #app-content #page.lobby #page-main .messages-list .message-item.type-small.highlighted {
 	padding: 0px 25px 15px 25px;
@@ -1402,6 +1405,10 @@ button.bookmark>svg>use,{
 		font-size: 1rem;
 		font-weight: 500;
 		margin-top: 5px;
+	}
+	.message-media-rich,
+	.message-media figure {
+		max-width: -webkit-fill-available;
 	}
 }
 

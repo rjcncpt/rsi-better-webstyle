@@ -1,8 +1,8 @@
 {
    "description": {
-      "message": "Questa estensione ottimizza la modalità scura del forum Spectrum e di alcuni altri siti web RSI. È necessario attivare la modalità scura."
+      "message": "Questa estensione per Chrome modifica l'aspetto di Spectrum e di alcuni siti web della RSI. È necessario che sia attivata la modalità scura."
    },
    "name": {
-      "message": "Star Citizen - Tema Scuro Migliorato"
+      "message": "Star Citizen - Migliore stile web RSI scuro"
    }
 }

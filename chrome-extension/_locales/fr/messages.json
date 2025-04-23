@@ -1,8 +1,8 @@
 {
    "description": {
-      "message": "Cette extension optimise le mode sombre du forum Spectrum et de certains autres sites web de RSI. Le mode sombre doit être activé."
+      "message": "Cette extension Chrome modifie l'apparence de Spectrum et de certains sites web RSI. Vous devez avoir activé le mode sombre."
    },
    "name": {
-      "message": "Star Citizen - Thème Sombre Amélioré"
+      "message": "Star Citizen - Meilleur style web RSI sombre"
    }
 }
