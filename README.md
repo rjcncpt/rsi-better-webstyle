@@ -1,4 +1,4 @@
-# RSI Better Webstyle
+# Star Citizen - Better RSI Dark Webstyle
 
 ![image](https://www.sc-deutsch-launcher.de/apps/rsi-better-webstyle/rsi-better-webstyle03.png)
 
