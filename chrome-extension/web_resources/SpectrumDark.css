@@ -255,11 +255,13 @@ aside.quick-access--open.search-results .search-panel,
 .notifications-main .notifications-item,
 #page.forum-channel .row,
 .message-item.status-default,
+.message-input .message-row,
 .message-item.status-default.type-small,
 .message-item.status-default.last-was-small,
 .message-item.status-default.type-small.last-was-small,
 .lobby-message__wrapper,
-.theme-dark .search-result-content{
+.theme-dark .search-result-content,
+.theme-dark .message-input .message-row>.input{
     border-radius: 10px;
 }
 /* borders end */
@@ -297,7 +299,8 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark .messages-list .separator.new-messages.faded,
 .theme-dark .messages-list .separator.new-messages.faded .new-messages .label,
 .theme-dark .messages-list .separator .label,
-.forum-thread-item .forum-thread-subject{
+.forum-thread-item .forum-thread-subject,
+#app #app-content #page.lobby .lobby-footer>.message-input .send-message{
 	font-weight:600;
 }
 /* font-weight end */
