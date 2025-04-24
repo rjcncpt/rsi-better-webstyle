@@ -439,6 +439,9 @@ div.button-group-selector button,
 	border-left: 1px solid #242e40;
 }
 
+.theme-dark .action-button--outline{
+	margin-left: 0px;
+}
 .theme-dark button.vote:hover,
 .theme-dark .action-button--outline:hover {
 	background-color: #2a456a !important;
@@ -1156,7 +1159,7 @@ button.bookmark>svg>use,{
 
 .lobby-message__dismiss {
 	align-items: flex-start;
-    border-left: 2px solid #203f6f;
+    border-left: 0;
 	top: 8px;
 	min-height: -webkit-fill-available;
 	height: fit-content;
