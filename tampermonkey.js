@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.0.7
+// @version        2.0.7.2
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -203,7 +203,8 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark button.vote.active,
 .theme-dark .action-button--outline,
 .theme-dark #sidebar .member-presence-menu-popout .popout-item:not(:last-child) {
-	border-color: rgb(42 69 106);
+	background-color: rgb(42, 69, 106) !important;
+    border-color: rgb(55 86 129) !important;
 }
 
 .theme-dark .member-profile .profile-topbar button.close:before {
@@ -255,11 +256,13 @@ aside.quick-access--open.search-results .search-panel,
 .notifications-main .notifications-item,
 #page.forum-channel .row,
 .message-item.status-default,
+.message-input .message-row,
 .message-item.status-default.type-small,
 .message-item.status-default.last-was-small,
 .message-item.status-default.type-small.last-was-small,
 .lobby-message__wrapper,
-.theme-dark .search-result-content{
+.theme-dark .search-result-content,
+.theme-dark .message-input .message-row>.input{
     border-radius: 10px;
 }
 /* borders end */
@@ -297,7 +300,8 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark .messages-list .separator.new-messages.faded,
 .theme-dark .messages-list .separator.new-messages.faded .new-messages .label,
 .theme-dark .messages-list .separator .label,
-.forum-thread-item .forum-thread-subject{
+.forum-thread-item .forum-thread-subject,
+#app #app-content #page.lobby .lobby-footer>.message-input .send-message{
 	font-weight:600;
 }
 /* font-weight end */
@@ -420,8 +424,13 @@ div.button-group-selector button,
 
 .theme-dark button.vote,
 .theme-dark .forum-thread-item .action {
-	background-color: #131a26;
+	background-color: #141f2f;
 	border-color: #1b2536;
+}
+.theme-dark button.vote:hover,
+.theme-dark .action-button--outline:hover {
+	background-color: #2a456a !important;
+	border-color: #4c80b7 !important;
 }
 .theme-dark button.vote.disabled,
 .theme-dark button.vote.disabled:hover:not(.no-border) {
@@ -441,11 +450,6 @@ div.button-group-selector button,
 
 .theme-dark .action-button--outline{
 	margin-left: 0px;
-}
-.theme-dark button.vote:hover,
-.theme-dark .action-button--outline:hover {
-	background-color: #2a456a !important;
-	border-color: #4c80b7 !important;
 }
 
 .theme-dark .reaction {
@@ -781,7 +785,7 @@ button.vote.vertical,
 /* notifications */
 
 #app #app-content #page{
-	border-radius: 10px 0px 0 0; /* Radius top left */
+	border-radius: 10px 0px 0 0;
 }
 .theme-dark .c-sidebar-navigation{
 	border-radius: 0px 10px 0 0; /* Radius top right */
@@ -789,6 +793,14 @@ button.vote.vertical,
 .theme-dark .c-sidebar-navigation-item,
 .theme-dark .c-sidebar-navigation-item a:hover{
 	box-shadow: none;
+}
+.theme-dark #app-content>#page.community>#page-main .community-list h3{
+	border-radius: 0px 10px 10px 0;
+	padding: 11px 0px 11px 35px;
+	margin-top: -1px;
+}
+#app-content>#page.community>#page-main .community-list .community-list-header .community-list-header-actions{
+	margin-right: 0px;
 }
 .theme-dark .forum-thread-item>.content .content-header>.left>.forum-thread-member-info .member-name span.displayname .nickname {
     color: inherit;
