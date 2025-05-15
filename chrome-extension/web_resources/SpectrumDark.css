@@ -687,10 +687,6 @@ button.vote.vertical,
 	display: flex;
 	justify-content: flex-start;
 }
-
-.page-wrapper .wrapper .error-message.probation {
-	display: none !important;
-}
 /* Error Message end */
 
 /* avatars */

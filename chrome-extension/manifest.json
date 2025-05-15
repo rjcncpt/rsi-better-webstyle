@@ -4,7 +4,7 @@
 	"description":      "__MSG_description__",
 	"default_locale":   "en_US",
 	"short_name":       "SpectrumDark",
-	"version":          "2.0.7.2",
+	"version":          "2.1.0.0",
 	"author":           "Rene Jansen",
 	"permissions": ["storage", "tabs"],
 	"background": {
@@ -21,8 +21,15 @@
    
 	"content_scripts": [
 		{
-			"js": [ "content_scripts/loader.js", "content_scripts/content.js" ],
-			"matches": [ "https://robertsspaceindustries.com/*", "https://developertracker.com/*" ]
+			"js": [
+				"content_scripts/loader.js",
+				"content_scripts/content.js",
+				"content_scripts/rotator-handler.js"
+			],
+			"matches": [
+				"https://robertsspaceindustries.com/*",
+				"https://developertracker.com/*"
+			]
 		}
 	],
    
