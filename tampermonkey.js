@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.1.1.0
+// @version        2.1.1.1
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -125,7 +125,6 @@ style.innerHTML = `
 .theme-dark .forum-editor-reply .forum-editor-core,
 .theme-dark .member-profile .profile-quick-msg textarea,
 .theme-dark #page #page-main .page-header .page-header-inner,
-.theme-dark .message-item.status-default:not(.edit-mode):hover,
 .theme-dark .message-media-rich,
 .theme-dark .message-media figure,
 .theme-dark #page.settings #page-main .settings-main .settings-sidebar,
@@ -162,7 +161,8 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark .message-item,
 #app #app-content #page.lobby #page-main .messages-list .message-item,
 .page-search-results #search-results .results-list > div,
-.page-search-results #search-results .results-list > a{
+.page-search-results #search-results .results-list > a,
+.theme-dark .message-item.status-default:not(.edit-mode):hover{
 	background: #101824;
 	background-color: #101824;
 }
