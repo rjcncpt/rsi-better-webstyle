@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.1.1.1
+// @version        2.1.1.2
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -104,7 +104,9 @@ style.innerHTML = `
 .quick-access-panel,
 .app.theme-dark .app-content .quick-access .lobby-member-presences,
 .app.theme-dark .app-content .quick-access .lobby-member-presences .search,
-.app.theme-dark .app-content #page.lobby .lobby-footer>.message-input{
+.app.theme-dark .app-content #page.lobby .lobby-footer>.message-input,
+.theme-dark .app-content>#page.community>#page-main .community-list,
+.theme-dark .app-content>#page.community>#page-main .community-list h3{
 	background: #0b111a !important;
 	background-color: #0b111a;
 }
@@ -128,7 +130,6 @@ style.innerHTML = `
 .theme-dark .message-media-rich,
 .theme-dark .message-media figure,
 .theme-dark #page.settings #page-main .settings-main .settings-sidebar,
-.theme-dark #app-content>#page.community>#page-main .community-list h3,
 .theme-dark .list-navigator .widgets .navigation .navigation-progress:before,
 .theme-dark #app-content #page.settings #page-main .settings-main .settings-content .section,
 .theme-dark #page.forum-thread .page-content .forum-thread .forum-thread-header .thread-control-bar,
@@ -811,11 +812,6 @@ button.vote.vertical,
 .theme-dark .c-sidebar-navigation-item a:hover{
 	box-shadow: none;
 }
-.theme-dark #app-content>#page.community>#page-main .community-list h3{
-	border-radius: 0px 10px 10px 0;
-	padding: 11px 0px 11px 35px;
-	margin-top: -1px;
-}
 #app-content>#page.community>#page-main .community-list .community-list-header .community-list-header-actions{
 	margin-right: 0px;
 }
@@ -1129,10 +1125,6 @@ button.bookmark>svg>use,{
 #app-content>#page.community>#page-main .community-list ul li.group h3 {
 	border-radius: 5px;
 	margin-left: 10px;
-}
-
-#app-content>#page.community>#page-main .community-list h3 {
-	padding: 11px 25px 11px 25px;
 }
 
 .theme-dark .forum-label {
