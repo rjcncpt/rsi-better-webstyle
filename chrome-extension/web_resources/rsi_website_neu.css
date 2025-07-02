@@ -555,7 +555,9 @@ h3.ShipItem-title br{
 	--media-filter: none;
 }
 
-.edIkVN {
+.edIkVN,
+.eoMxzt,
+.joIvMx {
 	background-color: #151f2e;
 }
 
@@ -565,6 +567,7 @@ h3.ShipItem-title br{
 }
 
 .gUDugF,
+.cBVlkA,
 .layaUB,
 .gDRwwd,
 .jrGvGl,
@@ -572,9 +575,7 @@ h3.ShipItem-title br{
 	background-color: rgb(32 45 65);
 	border: 0;
 }
-
-.edIkVN .jmUWOw,
-.edIkVN .cBVlkA,
+.eoMxzt .jmUWOw,
 .edIkVN .fvCukO,
 .edIkVN .feUlHA {
 	border: 0;
@@ -586,18 +587,10 @@ h3.ShipItem-title br{
 	width: 347px;
 	border-radius:10px;
 }
-.eoMxzt .jmUWOw,
-.eoMxzt .cBVlkA,
-.eoMxzt .fvCukO {
-	border: 0;
-	background-color: rgb(15 65 99);
-}
 
-.edIkVN .guFEco {
-	background: rgb(24 28 30);
-}
+.edIkVN .guFEco,
 .eoMxzt .guFEco {
-	background: rgb(6 48 77);
+	background: rgb(24 28 30);
 }
 
 .iuhXsP {
