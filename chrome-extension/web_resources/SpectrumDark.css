@@ -731,9 +731,13 @@ button.vote.vertical,
 	border-radius: 50%;
 }
 
-.theme-dark .member-avatar .avatar {
+.theme-dark .member-avatar .avatar,
+.theme-dark .message-item .member-avatar .avatar {
 	width: 56px;
 	height: 56px;
+}
+.theme-dark .message-item .member-avatar .avatar {
+	margin-right: 10px;
 }
 
 .theme-dark .member-avatar .avatar-badges {
@@ -801,6 +805,12 @@ button.vote.vertical,
 }
 #notifications .notifications-main .notifications-list .notifications-item .item-details .item-timestamp {
 	margin-top: 10px;
+}
+.quick-access-footer-tab{
+	padding: 14px;
+    height: inherit;
+	margin: 10px 10px 0;
+    border-radius: 10px;
 }
 /* notifications */
 
