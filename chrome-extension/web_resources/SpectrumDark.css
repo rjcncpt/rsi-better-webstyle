@@ -45,7 +45,6 @@
 .theme-dark #page #page-main,
 .theme-dark .search-panel .advanced-search,
 .theme-dark .forum-thread-item.is-editor-reply,
-.theme-dark .member-profile .profile-below-banner,
 .theme-dark .app-content #page.search #page-main .search-results,
 .app.theme-dark .app-content #page.lobby #page-main .messages-list,
 .theme-dark .app-content>#page.community>#page-main .community-list,
@@ -87,7 +86,8 @@
 .quick-access-panel,
 .app.theme-dark .app-content .quick-access .lobby-member-presences,
 .app.theme-dark .app-content .quick-access .lobby-member-presences .search,
-.theme-dark .app-content>#page.community>#page-main .community-list h3{
+.theme-dark .app-content>#page.community>#page-main .community-list h3,
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu{
 	background: #0b111a !important;
 	background-color: #0b111a;
 }
@@ -364,7 +364,10 @@ aside.quick-access--open.search-results .search-panel,
 [data-orion-skin] .a-productHomeProductLogo svg,
 [data-orion-skin].a-productHomeProductLogo svg,
 .breadcrumb.mobile-only a.breadcrumb-link,
-.breadcrumb.mobile-only a.breadcrumb-link .separator use{
+.breadcrumb.mobile-only a.breadcrumb-link .separator use,
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button,
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button .icon use,
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .action>.icon>use{
 	color: #ddedf7 !important;
 	fill: #ddedf7 !important;
 }
@@ -520,7 +523,7 @@ button.vote.vertical,
 .forum-thread-item>.content .content-header>.right .actions {
 	top: 5px;
     height: 40px;
-    right: 80px;
+    right: 10px;
 }
 
 .action-button,
@@ -552,6 +555,9 @@ button.vote.vertical,
 }
 .theme-dark button.select.active{
 	background-color: #243753;
+}
+[data-orion-skin] .a-notificationBadge.-isSelected{
+	background-color: #28577d;
 }
 /* buttons, reactions, icons */
 
@@ -597,6 +603,18 @@ button.vote.vertical,
 
 /* SEARCH RESULTS END */
 
+.mainLayout__right{
+	position: absolute;
+}
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu{
+	border-radius: 10px;
+}
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button:not(:last-child){
+	border-color: #ddedf7;
+}
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button.unsubscribe .icon use{
+	stroke: transparent;
+}
 #sidebar .member-presence-menu-popout .popout-item {
 	padding: 10px;
 }
@@ -828,9 +846,51 @@ blockquote {
 .role-badge .badge-icon {
 	padding-top: 0px;
 }
-
+.theme-dark .member-profile{
+	border-radius: 10px;
+}
+.theme-dark .member-profile{
+	background-color: #151f2e;
+}
+.theme-dark .member-profile .profile-below-banner{
+	background-color: #0b111a;
+}
+.theme-dark .member-profile .profile-stats-count,
+.theme-dark .member-profile .profile-action .icon use,
+.theme-dark .member-profile .profile-action{
+	color: #ffffff;
+	fill: #ffffff;
+}
 .theme-dark .member-profile .profile-badges .profile-badge:not(:last-child) {
 	margin-top: -2px;
+}
+
+.theme-dark .member-profile .profile-badges {
+	background: transparent;
+	border: 0;
+}
+
+.member-profile .profile-below-banner {
+	padding: 8px 14px;
+}
+
+.member-profile .profile-member-nickname {
+	margin-top: 6px;
+	margin-left: -3px;
+}
+.theme-dark .member-profile .profile-banner {
+    border-color: #0b111a;
+	border-bottom: 3px solid;
+	height: auto;
+	padding: 20px 20px 10px;
+}
+.member-profile .profile-banner .profile-banner-content {
+	margin-bottom: 10px;
+	align-items: center;
+}
+.member-profile .profile-banner .profile-banner-content .displayname{
+	display: inline-flex;
+    flex-direction: row;
 }
 
 .theme-dark #page.forum-channel .row .column.subject .subject-media-preview {
@@ -902,24 +962,6 @@ blockquote {
 .theme-dark .messages-list .separator .label {
 	padding: 10px;
 	text-transform: uppercase;
-}
-
-.theme-dark .member-profile .profile-badges {
-	background: transparent;
-	border: 0;
-}
-
-.member-profile .profile-below-banner {
-	padding: 8px 14px;
-}
-
-.member-profile .profile-member-nickname {
-	margin-top: 4px;
-	margin-left: -3px;
-}
-
-.member-profile .profile-banner .profile-banner-content {
-	margin-bottom: 10px;
 }
 
 .l-sidebar {

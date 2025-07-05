@@ -634,3 +634,20 @@ h3.ShipItem-title br{
     border: 0;
 }
 /* Roadmap Release View end */
+
+/* GUIDE SYSTEM */
+.guide__member .member-avatar{
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.guide__member .avatar{
+	margin-right: 0;
+}
+.theme-dark .member-avatar .avatar {
+    width: 70px;
+    height: 70px;
+}
+/* GUIDE SYSTEM end */
