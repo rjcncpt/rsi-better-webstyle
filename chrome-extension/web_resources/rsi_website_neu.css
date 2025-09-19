@@ -49,6 +49,12 @@
 }
 
 @media only screen and (max-width:500px) {
+    [data-orion-skin] .a-grid__inside {
+        padding-inline: 20px;
+    }
+	.accountReferralHeroBanner{
+		padding: var(--orion-layout-spacing-350) 0 calc(var(--orion-layout-spacing-350) + 1rem)!important;
+	}
 	.c-notification__inner {
 		padding: 0 40px 0 40px;
 	}
