@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.1.1.5
+// @version        2.1.2.0
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -23,9 +23,6 @@ style.innerHTML = `
 	.theme-dark.app,
 	[data-orion-skin] .a-grid__inside{
 		width: 100% !important;
-	}
-	[data-orion-skin] .a-grid__inside {
-		padding-inline: 10px;
 	}
 }
 
@@ -1528,17 +1525,62 @@ button.bookmark>svg>use,{
 
 /* RSI Start page */
 
-/* Header */
-[data-orion-skin] .o-navigationHead,
-[data-orion-skin].o-navigationHead,
-[data-orion-skin] .m-breadcrumb{
-	background: rgb(21 31 46);
-}
-#react {
-    border-color: #151f2e;
+.wrapper {
+	max-width: 1140px;
 }
 
-/* Notification */
+/* Border-Radius 10px */
+#subscribers .album,
+#billing .content .row,
+#billing .content .row.dark #referral .leaderboard-table,
+#subscribers .album .inner img,
+#settings.referral-program .referral-rank-wrapper,
+.new-players-section .new-players-block__background,
+#billing .content .row.active .more .with-images .item,
+#billing.pledges .list-items .item-image-wrapper .image,
+#billing .content .row.active .more .with-images .item .image,
+#settings.referral-program .referral-rank-wrapper .reward img,
+#referral .leaderboard-table .leaderboard-row:not(:last-child) {
+	border-radius: 10px;
+}
+
+/* Border-Radius 10px */
+
+/* border-radius 50% */
+.account-profile .overview-content .thumb img,
+#settings.referral-program .referral-rank-wrapper .rank .badge,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .avatar,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .avatar img,
+#referral .leaderboard-table .leaderboard-row .leaderboard-avatar img {
+	border-radius: 50%;
+}
+
+/* border-radius 50% */
+
+.sidenav li a {
+	font-size: 14px;
+	color: #00aeff;
+}
+
+.sidenav li.special a {
+	color: #ff0 !important;
+}
+
+#settings .block-head h3,
+#settings.referral-program h4,
+#settings.referral-program .referral-rank-wrapper .rank .progress .label {
+	font-size: 1.3em;
+	padding: 0px 0 18px;
+	padding-bottom: 10px !important;
+}
+
+#settings .success-message {
+	line-height: 1.2em;
+	font-size: .9em;
+	font-weight: 500;
+	padding: 30px 30px 30px 60px;
+}
+
 .l-notification-bar {
 	width: 30%;
 	position: fixed;
@@ -1555,6 +1597,457 @@ button.bookmark>svg>use,{
 	left: calc(-100px + -22%);
 	transition: left 0.3s ease-in-out;
 }
+
+#settings .inner-content .row>.shadow {
+	padding: 5px 0px !important;
+}
+
+#settings .inner-content .row .col.col-edit-wrapper>.view {
+	line-height: 34px !important;
+}
+
+#settings .inner-content .row>.shadow>.inner label.sub-label,
+#settings .inner-content .row>.shadow>.inner .more-info {
+	margin-top: -20px !important;
+}
+
+#settings .inner-content .row .edit {
+	top: 4px !important;
+}
+
+#settings .inner-content .row>.shadow>.inner label {
+	font-weight: normal;
+}
+
+#settings.profile #settings-twitch .twitch-legal-text {
+	line-height: 20px !important;
+}
+
+#home #home-background,
+#community #home-background,
+#home #home-background .bg-home-stars,
+#community #home-background .bg-home-stars,
+#contentbody,
+#contentbody.public-profile,
+#contentbody.account-section,
+.account-section .content-wrapper,
+.content-block1 .content,
+h1.page-title {
+	background: none;
+	background-color: #05111d;
+}
+
+#billing.pledges .items h2 {
+	margin-bottom: 0px;
+}
+
+#billing.pledges .list-items .item-image-wrapper.executed {
+	background: rgb(0 0 0 / 0%);
+}
+
+#billing.pledges .list-items .title-col h3 {
+	color: #fff;
+}
+
+#billing.pledges .list-items .title-col h3,
+#billing .content .row.active .more .with-images .item .text .title {
+	text-transform: capitalize;
+}
+
+.content-block3 {
+	border: 0px solid #1e2f41;
+	padding: 0px;
+}
+
+#billing.pledges .list-items .item-image-wrapper .image {
+	width: 165px;
+	height: 165px;
+}
+
+#billing.pledges .wrapper-col {
+	margin-left: 175px;
+}
+
+#contentbody,
+.content-block4>.content {
+	background: none;
+}
+
+#contentbody.public-profile{
+	padding-bottom: 124px;
+	min-height: inherit;
+}
+
+#devHub .devHub-section__wrapper,
+#devHub .devHub-section .devHub-navLink span,
+#devHub .devHub-section__header::after {
+	background-color: #05111d;
+}
+
+.new-players-section .new-players-block__title {
+	font-size: 2.3em;
+}
+
+.flipboard-boxes .box {
+	margin-bottom: 30px;
+}
+
+.flipboard-boxes .box.two-third {
+	width: 750px;
+}
+
+.flipboard-boxes .box.three-third {
+	width: 1140px;
+}
+
+.flipboard-boxes .box .info .title {
+	font-size: 2em;
+	line-height: 1.1em;
+	font-weight: 900;
+}
+
+#devHub .devHub-section .devHub-navLink span::before {
+	border-color: transparent #05111d #05111d transparent;
+}
+
+.account-profile {
+	max-width: 100%;
+	background: rgb(4 14 24);
+}
+
+.account-profile .box-content .inner-bg {
+	background: none;
+}
+
+.account-profile .profile-content .entry .label,
+.account-profile .profile-content .entry.bio .value,
+#home .home-wrapper .live-stats #squadronStats .name,
+.flipboard-boxes .box .info .excerpt {
+	color: #dddddd;
+	font-size: 1em;
+	line-height: normal;
+}
+
+.account-profile .profile-content .entry.citizen-record,
+.account-profile .profile-content .entry.citizen-record .value {
+	font-weight: 600;
+}
+
+.account-profile .profile-content .entry .label {
+	margin-top: 20px;
+}
+
+.account-profile .overview-content .inner {
+	padding: 20px 40px 20px 40px;
+}
+
+.account-profile .profile-content .entry .icon {
+	margin-right: 5px;
+}
+
+.account-profile .overview-content .profile-wrapper .main-org .empty,
+.account-profile .orgs-content .empty {
+	color: #cd0d00;
+	text-shadow: 0px 0px 20px #cd0d00;
+	font-weight: 600;
+}
+
+.account-profile .overview-content .thumb {
+	border: 0;
+	padding: 0;
+}
+
+.account-profile .deco-corner {
+	background: none;
+}
+
+.c-brand-menu----rsi .c-brand-menu__link,
+#home .home-wrapper .live-stats #squadronStats .nav-item,
+#home .home-wrapper .live-stats #starcitizenStats .nav-item {
+	font-weight: 666;
+}
+
+.c-header-wrapper.is-account-open .c-right-sidebar--account,
+.c-header-wrapper.is-account-open .c-right-sidebar--signin {
+	z-index: 999;
+}
+
+.c-menu-link----rsi {
+	color: #89aebd;
+}
+
+.c-features-carousel__item-title {
+	margin-bottom: 0px;
+}
+
+#home .home-wrapper .live-stats #starcitizenStats .text,
+#home .home-wrapper .live-stats #squadronStats .text {
+	color: #6AADD1;
+	line-height: normal;
+}
+
+#home .home-wrapper .live-stats,
+.glow-page-title.with-link.flipboard-latest-news-title.wrapper,
+.flipboard-boxes.flipboard-latest-news.wrapper,
+.flipboard-boxes.wrapper.flipboard-community-news,
+#home .home-wrapper .developer-tracker,
+#home .flipboard-news-wrapper .flipboard-boxes.flipboard-sku-content {
+	padding: 0 0px !important;
+}
+
+.glow-page-title .inner-title .title,
+.glow-page-title .inner-title .subtitle {
+	left: 0px;
+	font: 500 1.5em/0em Orbitron;
+}
+
+.flipboard-boxes .box.type-E .info {
+	padding-top: 40px;
+}
+
+.c-platform .l-container {
+	max-width: 1370px;
+	padding: 0 50px 0 50px;
+}
+
+.c-notification__inner {
+	padding: 25px 34px 25px 35px;
+}
+
+.c-platform .l-container--navigation {
+	padding: 0;
+}
+
+.wrapper .content-block1 {
+	padding: 49px 0px 66px 0px;
+}
+
+.content-block1 {
+	border: 0px;
+}
+
+#billing .content .row,
+#billing .content .row.dark {
+	margin: 0 0 15px 0px;
+	background: rgba(12, 27, 43, 0.5);
+}
+
+#billing .content .row.active .more {
+	background: none;
+}
+
+#billing .content .row.active .more .content-block1 {
+	border: 0px;
+}
+
+#billing .content .row.active .more .with-images {
+	margin: -46px -30px -66px -30px !important;
+}
+
+#billing .content .row.active .more .with-images .item {
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+
+#billing .content .row.active .more .with-images .item .text {
+	width: auto;
+	margin-left: 25px;
+	margin-bottom: 22px;
+	margin-top: 20px;
+}
+
+#billing .content .row.active .more .with-images .item .text .title {
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+#billing .content .row.active .more .with-images .item .text .kind,
+#billing .content .row.active .more .with-images .item .text .liner {
+	font-size: .8em;
+	font-style: normal;
+	padding-bottom: 10px;
+}
+
+#billing .content .row.active .more .with-images .item .text .liner,
+#billing .content .row.active .more .with-images .item .text .liner span,
+#billing.pledges .items-col,
+#billing.pledges .date-col,
+#settings.referral-program .recruits-list-wrapper #users-list .user-row .status,
+#settings.referral-program .referral-rank-wrapper .reward .desc,
+#settings.referral-program .referral-rank-wrapper .rank .progress .next-rank,
+#settings.referral-program .referral-rank-wrapper .reward h4,
+#settings.referral-program h4
+ {
+	color: #bec8d3;
+}
+
+#billing .content .row.active .more .with-images .item .image {
+	width: 216px;
+	height: 133px;
+	margin: 22px 0px 22px 25px;
+}
+
+#billing .content .row.active .more .also-contains {
+	margin-top: 90px;
+}
+
+#billing .content .row.active .more .without-images {
+	margin-left: 10px;
+}
+
+#billing .content .row.active .more .without-images .item {
+	margin-left: -22px;
+}
+
+#billing .content .row.active .more .without-images .item .title {
+	font-weight: normal;
+}
+
+#billing .content .row.executed {
+	background: #0d293a;
+	background-size: 20% !important;
+	background-image: url(https://i.imgur.com/phRL2D4.png) !important;
+	background-position: calc(100% - 20px) 20px !important;
+	background-repeat: no-repeat !important;
+}
+
+.without-images {
+	margin-bottom: -30px !important;
+}
+
+#billing .content .row .more table.billing-summary td {
+	font-size: 1.3em;
+}
+
+#billing .content .payment-wrapper>.right-section .s-row {
+	font-size: .9em;
+}
+
+#billing .content .bottom.billing-title-pager-wrapper {
+	padding-top: 15px;
+}
+
+#billing.pledges .date-col {
+	font-size: 1.2em;
+	padding-top: 15px;
+	float: inherit;
+}
+
+#billing.pledges .items-col label {
+	display: inline-block;
+}
+
+#billing.pledges .date-col label {
+	display: inline-block;
+	font-size: 1em;
+	margin: 0px 0;
+}
+#billing.pledges .date-col label,
+#billing.pledges .items-col label,
+#billing.pledges .items-col label{
+	font-weight:600;
+}
+
+#billing.pledges .items-col {
+	padding-top: 0px;
+	width: 90%;
+	font-size: 1.2em;
+}
+
+#billing.pledges .content .row .arrow {
+	top: 105px;
+}
+
+.js-inventory .js-selected {
+	background: rgb(12 27 43) !important;
+}
+
+.js-selectlist.selectlist.w200 {
+	width: 210px;
+}
+
+.js-selectlist.selectlist option li,
+.js-selectlist.selectlist ul li {
+	width: 100%;
+	color: #ebebeb;
+}
+
+.js-selectlist.selectlist .body {
+	width: 100%;
+}
+
+.js-selectlist.selectlist>span {
+	color: #ebebeb;
+	padding: 4px 0px 4px 10px;
+	width: 70%;
+}
+
+#block-header.c-header {
+	top: 0px;
+}
+
+.g-faq__header-title {
+    font-size: 1em;
+    font-family: 'Open Sans';
+    line-height: 32px;
+}
+
+/* Issue Council */
+.c-header {
+	top: 35px;
+}
+
+/* Issue Council end */
+
+/* Pladge Store */
+#store .intro-text {
+    text-align: center;
+}
+.featured-listing.split .products-row {
+	padding:0px!important;
+}
+.RSIStoreTheme .Cart {
+	padding-bottom: 1px;
+}
+
+.lobby-member-presences>.members-list .ReactVirtualized__Grid.ReactVirtualized__List {
+	height: 1182px !important;
+}
+
+.RSIStoreTheme .c-price-tag-content {
+	color: #fff;
+}
+
+.ReactVirtualized__Grid.ReactVirtualized__List {
+	height: 62vh !important;
+}
+
+.RSIStoreTheme .ShipUpgrade .ShipUpgrade-selectors,
+.RSIStoreTheme .ShipUpgrade {
+	padding-bottom: 0px !important;
+}
+
+.RSIStoreTheme div.ShipItem.small .ShipItem-general-information-clip {
+	margin-left: -10px;
+}
+
+h3.ShipItem-title span.ShipItem-general-information-name-prefix,
+h3.ShipItem-title br {
+	display: none;
+}
+
+.RSIStoreTheme .DisclaimerModal .DisclaimerModalContent__wrapper {
+	max-height: fit-content;
+	background: #21282d;
+	padding: 25px 25px 0px 32px;
+}
+[data-orion-skin] .m-subNavigationBarItem.-variant-regular,
+[data-orion-skin].m-subNavigationBarItem.-variant-regular{
+    height: inherit!important;
+}
+/* Pladge Store end */
+
+/* NOTIFICATION */
 .c-notification__button {
 	color: #fff;
 }
@@ -1584,7 +2077,6 @@ button.bookmark>svg>use,{
 }
 
 .c-notification__inner {
-	padding: 25px 34px 25px 35px;
 	display: block;
 	width: 100%;
 }
@@ -1607,577 +2099,53 @@ button.bookmark>svg>use,{
 	color: #d2f0ff;
 }
 
-[data-orion-skin] .m-navigationSubBlock.-use2Columns, [data-orion-skin].m-navigationSubBlock.-use2Columns {
-    width: max-content;
-}
-[data-orion-skin] .m-navigationSubBlock__content, [data-orion-skin].m-navigationSubBlock__content {
-    gap: 5px;
-    margin-top: 10px;
-}
-[data-orion-skin] .m-navigationSubItem, [data-orion-skin].m-navigationSubItem {
-    background-color: rgb(25 68 95);
-    padding: 20px;
-    border-radius: 10px;
-}
-[data-orion-skin] .m-navigationSubItem__description, [data-orion-skin].m-navigationSubItem__description {
-    color: rgb(158 196 219);
+/* NOTIFICATION end */
+
+/* SUBSCRIBERS */
+#subscribers .inner-content .top>p {
+	font-size: 1em;
+	line-height: 1.3em;
 }
 
-/* Notification */
-
-/* Profil box */
-[data-orion-skin] .orion-beta-c-box.-background-surface_0,
-[data-orion-skin].orion-beta-c-box.-background-surface_0{
-	background-color: #0b111a;
-}
-[data-orion-skin] .accountPanelUser__svg,
-[data-orion-skin].accountPanelUser__svg,
-[data-orion-skin] .accountPanelUser,
-[data-orion-skin].accountPanelUser{
-	color: rgb(21 31 46);
-	--account-panel-background-color: rgb(21 31 46);
-}
-[data-orion-skin] .a-fontStyle.-body-4{
-	font-size: inherit;
-}
-/* Profil box */
-
-/* Avatar */
-.a-avatarButton__image.a-avatarImage,
-[data-orion-skin] .orion-c-avatar__wrapper,
-[data-orion-skin] .orion-c-avatar__image{
-    border: 3px solid #2d587d;
-}
-.a-avatarButton__image.a-avatarImage,
-[data-orion-skin] .orion-c-avatar__wrapper,
-[data-orion-skin] .orion-c-avatar__image,
-.account-profile .overview-content .thumb img,
-.account-profile .overview-content .thumb{
-    border-radius: 50% !important;
-}
-[data-orion-skin] .orion-c-avatar__wrapper::after {
-    border: 0;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas{
-	justify-content: center;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-avatar,
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-badge {
-    border-radius: 50%;
-    border: 0;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-metas-badge {
-	width: auto;
-}
-/* Avatar */
-
-/* Navigation */
-[data-orion-skin] .o-navigationBar,
-[data-orion-skin].o-navigationBar {
-    background: rgb(21 31 46);
-}
-.o-navigationBar__siblings {
-    display: none;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-credits {
-    zoom: 1.2;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-displayname {
-    font-size: 1.1em;
-    font-weight: 600;
-}
-.c-header-wrapper .c-right-sidebar--account .c-account-sidebar__profile-info-handle {
-    font-size: 1em;
-}
-.a-fontStyle.-heading-7,
-.m-navigationSubBlock__title {
-    font-size: 1.2em !important;
-}
-.a-button.-interaction {
-    --_button-text-color-default: rgb(255 255 255) !important;
-}
-[data-orion-skin] .m-closeableNavigationButton{
-	margin-right: 10px;
-}
-/* Navigation */
-
-/* Pledge Store */
-.RSIStoreTheme .BrowseFilter .BrowseFilter__filters {
-    background: #16191d;
-    margin-top: 7px;
-}
-@container shipCardStack (width >= 888px) {
-    [data-orion-skin] .c-shipCardStack__grid {
-        grid-template-columns: repeat(auto-fill, minmax(calc(25% - var(--_shipCardStack-gap)), 1fr));
-    }
-}
-@container shipCardInformation (width < 500px) {
-    [data-orion-skin] .a-shipCardInformation__container {
-        flex-direction: column;
-        gap: var(--orion-layout-spacing-0125);
-        min-height: 70px;
-    }
-}
-[data-orion-skin] .a-shipCardManufacturer__curve {
-    margin-right: -1px;
-}
-.a-fontStyle.-button-2 {
-    font-size: 1em;
-}
-[data-orion-skin] .m-inputBase__input input,
-[data-orion-skin] .m-inputBase__input textarea,
-[data-orion-skin] .m-inputBase__input select,
-[data-orion-skin] .m-inputBase__input .m-inputBase__content {
-    font-size: .9em;
-}
-.RSIStoreTheme div.ShipItem .ShipItem-general-information-name-prefix,
-h3.ShipItem-title br{
-	display:none;
-}
-.RSIStoreTheme div.ShipItem .ShipItem-general-information-focus{
-	margin-top:0;
-}
-.RSIStoreTheme div.ShipItem .ShipItem-general-information{
-	align-items: flex-start;
-	align-content:flex-start;
-	justify-content: center;
-	margin-top:10px;
-}
-.RSIStoreTheme div.ShipItem .ShipItem-general-information-flyable-status{
-	margin:0;
-}
-[data-orion-skin] .m-subNavigationBarItem.-variant-regular,
-[data-orion-skin].m-subNavigationBarItem.-variant-regular{
-    height: inherit!important;
-}
-@container shipsGrid (width >= 888px) {
-    [data-orion-skin] .o-shipsGrid__filterWrapper, [data-orion-skin].o-shipsGrid__filterWrapper {
-        top: calc(150px + var(--orion-navigation-bar-height));
-    }
-}
-/* Pledge Store */
-
-/* REFERRAL PAGE */
-/* Zoom 90% */
-#settings.referral-program .referral-rank-wrapper .reward,
-#settings.referral-program .referral-rank-wrapper .rank .badge,
-#settings.referral-program .referral-rank-wrapper .rank .progress {
-	zoom: 90%;
-}
-/* Zoom 90% end */
-
-
-.wrapper .content-block1 {
-	padding: 40px;
-}
-
-#settings.referral-program .block-head,
-.corner.corner-top-left,
-.corner.corner-top-right,
-.corner.corner-bottom-left,
-.corner.corner-bottom-right,
-#settings.referral-program .recruits-list-wrapper #users-list .user-row:before {
-	display: none;
-}
-
-#settings.referral-program #users-list {
-	display: flex;
-    flex-wrap: wrap;
-    gap: 0 20px;
-}
-#settings.referral-program #users-list > div {
-	flex: 1 0 calc(33.333% - 10px);
-    box-sizing: border-box;
-}
-
-#settings.referral-program .referral-rank-wrapper,
-#settings.referral-program .recruits-list-wrapper {
-	padding: 0;
+#subscribers .subnav {
 	background: none;
 }
 
-#settings.referral-program .referral-rank-wrapper {
-	background-color: rgb(12 27 43) !important;
-	;
-	padding: 20px 0px 30px !important;
-	margin-top: 20px;
+#subscribers .album .inner img {
+	border: 0;
+}
+
+#subscribers .album .inner p {
+	color: #e5e5e5;
+}
+
+#subscribers .album .inner h3 {
+	text-transform: inherit;
+	line-height: 1.2em;
+}
+
+#subscribers .album .inner h3:nth-of-type(2) {
+	color: #d2f0ff;
+	font-size: .9em;
+}
+
+#subscribers .album-wrapper {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
-#settings.referral-program .referral-rank-wrapper .rank .progress {
+#subscribers .album {
+	min-height: 310px;
 	height: auto;
-	margin-top: 5%;
-	margin-left: 10px;
+	margin: 0 4px 20px 0;
 }
 
-#settings.referral-program .referral-rank-wrapper .rank .progress .bar .percent span {
-	box-shadow: none;
+#subscribers .album .inner {
+	padding: 17px;
 }
 
-#settings.referral-program h4 {
-	margin: 0 0 14px;
-}
-
-#settings.referral-program .rank h4:before {
-	content: "Your rank: ";
-}
-
-#settings.referral-program .referral-rank-wrapper .reward h4 {
-	font-size: 1.2em;
-	padding: 0 0 9px;
-	font-weight: 400;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-#settings.referral-program .referral-rank-wrapper .rank .badge {
-	background: rgba(0, 200, 255, .05);
-}
-
-#settings.referral-program .referral-rank-wrapper .rank .progress .ranking {
-	margin-top: -15px;
-	bottom: auto;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row .avatar {
-	margin-right: 10px;
-	border: none;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row {
-	padding: 7px 0 7px 0px !important;
-}
-
-#settings.referral-program .referral-rank-wrapper .reward .desc {
-	margin-top: 14px;
-	font-size: 1em;
-}
-
-#settings.referral-program form#share-referral-form input {
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	font-weight: 700;
-}
-
-#settings.referral-program form#share-referral-form label {
-	font-size: 1em;
-}
-
-#settings.referral-program .recruits-list-wrapper form#recruits-list-form a,
-#settings.referral-program .recruits-list-wrapper #users-list .user-row .user {
-	font-size: .9em;
-	margin-top: 10px;
-	font-weight: 600;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row .user span {
-	font-weight: 400;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row .status {
-	top: 35%;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child {
-	padding-top: 7px;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row {
-	padding: 7px 0 7px 15px;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child::before,
-#settings.referral-program .recruits-list-wrapper #users-list .user-row::before {
-	top: 7px;
-}
-
-#settings.referral-program .recruits-list-wrapper #users-list .user-row:first-child,
-#settings.referral-program .recruits-list-wrapper #users-list .user-row {
-	height: 75px;
-}
-
-#settings.referral-program .recruits-list-wrapper form#recruits-list-form a:first-child {
-	margin: 0 10px 12px 0;
-}
-
-#settings.referral-program .recruits-list-wrapper form#recruits-list-form a:first-child::before {
-	height: 24px;
-}
-
-#settings.referral-program p {
-	font-size: .85em;
-	line-height: 2em;
-	color: #6d7e8f;
-}
-
-#settings.referral-program .referral-rank-wrapper .reward img {
-	height: auto;
-}
-
-#referral .referral-share p {
-	font-size: 1em;
-}
-
-#referral .description {
-	width: auto;
-}
-
-#referral .description .block {
-	width: 300px;
-}
-
-#referral .description .block .title {
-	font: bold 1.2em "Orbitron";
-}
-
-#referral .description .block p {
-	text-align: center;
-}
-
-#referral p.recruitment {
-	font-size: 1em;
-}
-
-#referral .table .rows .row .infos {
-	padding-top: 4px;
-	color: #73b1cb;
-}
-
-#referral .table .rows .row .grade {
-	width: 200px;
-}
-
-#referral .table .rows .row .icon {
-	width: 110px;
-}
-
-#referral .table .table-header.rewards .empty,
-#referral .table .table-header.ranks .empty {
-	background: #05111d;
-}
-
-#referral .table .table-header.ranks .label:before,
-#referral .table .table-header.rewards .label:before {
-	border-color: transparent transparent rgb(0 0 0 / 0%) transparent;
-}
-
-#referral .leaderboard-table {
-	width: 840px;
-	border: 0px solid #0b6096;
-	background: none;
-}
-
-#referral .leaderboard-table .leaderboard-row.top-row {
-	background-color: #054266;
-}
-
-#referral .leaderboard-table .leaderboard-row {
-	height: 100px;
-}
-
-#referral .leaderboard-table .leaderboard-row:not(:last-child) {
-	border-bottom: 1px solid #06314b;
-	margin-bottom: 10px;
-}
-
-#referral .leaderboard-table .leaderboard-row.top-row {
-	box-shadow: 0 0 30px 0 rgb(26 140 255 / 0%), 0 0 30px 0 rgb(26 140 255 / 18%);
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-rank {
-	padding-top: 0px;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-cell:not(:last-child) {
-	border-right: 0px solid #06314b;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-displayname {
-	font-weight: 800;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-displayname {
-	font-size: 1em;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-name .name-nickname,
-#referral .leaderboard-table .leaderboard-row .leaderboard-referrals .referrals-unit {
-	font-size: 1em;
-	color: #73b1cb;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-referrals .referrals-count {
-	font-size: 1.5em;
-	font-weight: 800;
-}
-
-#referral .leaderboard-table .leaderboard-row .leaderboard-rank.top-rank {
-	background-position: center 50%;
-}
-
-#settings.ptu .ptucard p h3 {
-	margin: 1.5em 0 0 0;
-}
-
-#settings.ptu .ptucard p,
-#settings .inner-content .top>p,
-#billing .inner-content .top>p,
-#subscribers .inner-content .top>p {
-	font-size: .9em;
-	color: #ffffff;
-}
-/* REFERRAL PAGE end */
-
-/* Roadmap Release View */
-.gtqzZI {
-	line-height: inherit;
-}
-
-.enkTcq {
-	padding: 5px 80px 0px 0px;
-}
-
-.cEDkBB svg {
-	rotate: 270deg;
-}
-
-.iBUFAA {
-	padding: 1px 10px;
-}
-
-.dDNykc {
-	background-color: rgb(189 146 54 / 75%);
-}
-
-.gzfXtH {
-    background-color: rgb(71 131 64);
-    color: rgb(255 255 255);
-}
-
-.guFEco {
-	background: rgb(6 48 77);
-}
-
-.eoMxzt {
-	background-color: rgb(0 41 69);
-}
-
-.hXHxeU {
-	background-image: none;
-	background-color: #05111d;
-}
-
-.gyhYfJ {
-	margin: auto;
-	border-radius: 10px;
-	width: 90%;
-}
-
-.gyhYfJ,
-.iqyNJj {
-	filter: none;
-	--media-filter: none;
-}
-
-.edIkVN,
-.eoMxzt,
-.joIvMx {
-	background-color: #151f2e;
-}
-
-.edIkVN,
-.eoMxzt {
-	width: 380px;
-}
-
-.gUDugF,
-.cBVlkA,
-.layaUB,
-.gDRwwd,
-.jrGvGl,
-.eoMxzt .layaUB {
-	background-color: rgb(32 45 65);
-	border: 0;
-}
-.eoMxzt .jmUWOw,
-.edIkVN .fvCukO,
-.edIkVN .feUlHA {
-	border: 0;
-	background-color: rgb(32 45 65);
-}
-.feUlHA,
-.fvCukO {
-	margin-top: -4px;
-	width: 347px;
-	border-radius:10px;
-}
-
-.edIkVN .guFEco,
-.eoMxzt .guFEco {
-	background: rgb(24 28 30);
-}
-
-.iuhXsP {
-	padding-left: 10px;
-}
-
-.iLbqJB {
-	border-right: 5px solid rgb(75 166 222);
-}
-
-.gdkTeu {
-	background: rgb(24 28 30);
-	color: rgb(214 229 235);
-}
-
-.gQsLHY,
-.cVqGvX {
-    color: rgb(186, 193, 197);
-}
-.ifddtC::before,
-.iqyNJj::before {
-    background-color: rgb(5 17 29);
-}
-.ifddtC,
-.iqyNJj {
-    --color-secondary: rgb(24 34 49);
-}
-.fbdFND {
-    background-color: rgb(32 45 65);
-}
-.eRqdlz {
-    background-color: rgb(189 146 54 / 75%);
-	color:#fff;
-}
-.iSJsDE {
-    background-color: rgb(71 131 64);
-	color:#fff;
-}
-.dlSnfY,
-.bVMmCL {
-    border: 0;
-}
-/* Roadmap Release View end */
-
-/* GUIDE SYSTEM */
-.guide__member .member-avatar{
-	display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
-.guide__member .avatar{
-	margin-right: 0;
-}
-.theme-dark .member-avatar .avatar {
-    width: 70px;
-    height: 70px;
-}
-/* GUIDE SYSTEM end */`;
+/* SUBSCRIBERS end */`;
     document.head.appendChild(style);
 })();

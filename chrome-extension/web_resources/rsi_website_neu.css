@@ -243,15 +243,6 @@ h3.ShipItem-title br{
 	padding: 40px;
 }
 
-#settings.referral-program .block-head,
-.corner.corner-top-left,
-.corner.corner-top-right,
-.corner.corner-bottom-left,
-.corner.corner-bottom-right,
-#settings.referral-program .recruits-list-wrapper #users-list .user-row:before {
-	display: none;
-}
-
 #settings.referral-program #users-list {
 	display: flex;
     flex-wrap: wrap;
@@ -270,7 +261,6 @@ h3.ShipItem-title br{
 
 #settings.referral-program .referral-rank-wrapper {
 	background-color: rgb(12 27 43) !important;
-	;
 	padding: 20px 0px 30px !important;
 	margin-top: 20px;
 	display: flex;
@@ -501,6 +491,36 @@ h3.ShipItem-title br{
 #subscribers .inner-content .top>p {
 	font-size: .9em;
 	color: #ffffff;
+}
+#contentbody #layout-system{
+	display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+[data-cy-id="video__container"] {
+	display: none;
+}
+[data-orion-skin] .accountReferralHeroBanner:after{
+	background: none;
+}
+[data-orion-skin] .accountReferralRecruitsModal__navigation{
+	width: 100%;
+}
+[data-rsi-component-id="platform-component-5"] {
+	order: 1;
+}
+[data-rsi-component-id="platform-component-6"] {
+	order: 3;
+}
+[data-rsi-component-id="platform-component-7"] {
+	order: 2;
+}
+[data-rsi-component-id="platform-component-7"] .a-stack.orion-beta-c-box.-withPadding.-background-surface_1 {
+	--orion-box-padding: inherit !important;
+	background-color:transparent !important;
+}
+[data-rsi-component-id="platform-component-8"] {
+	order: 4;
 }
 /* REFERRAL PAGE end */
 

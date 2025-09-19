@@ -13,9 +13,6 @@
 	[data-orion-skin] .a-grid__inside{
 		width: 100% !important;
 	}
-	[data-orion-skin] .a-grid__inside {
-		padding-inline: 10px;
-	}
 }
 
 /* Custom CSS */
