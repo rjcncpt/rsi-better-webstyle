@@ -2,8 +2,7 @@
 
 /* Header */
 [data-orion-skin] .o-navigationHead,
-[data-orion-skin].o-navigationHead,
-[data-orion-skin] .m-breadcrumb{
+[data-orion-skin].o-navigationHead{
 	background: rgb(21 31 46);
 }
 #react {
