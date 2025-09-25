@@ -527,6 +527,20 @@ h3.ShipItem-title br{
 [data-rsi-component-id="platform-component-8"] {
 	order: 4;
 }
+@media only screen and (max-width:500px) {
+	[data-rsi-component-id="platform-component-5"] {
+		order: 1;
+	}
+	[data-rsi-component-id="platform-component-6"] {
+		order: 2;
+	}
+	[data-rsi-component-id="platform-component-7"] {
+		order: 3;
+	}
+	[data-rsi-component-id="platform-component-8"] {
+		order: 4;
+	}
+}
 /* REFERRAL PAGE end */
 
 /* Roadmap Release View */

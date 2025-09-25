@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.1.2.3
+// @version        2.1.2.5
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -2051,6 +2051,20 @@ h3.ShipItem-title br{
 }
 [data-rsi-component-id="platform-component-8"] {
 	order: 4;
+}
+@media only screen and (max-width:500px) {
+	[data-rsi-component-id="platform-component-5"] {
+		order: 1;
+	}
+	[data-rsi-component-id="platform-component-6"] {
+		order: 2;
+	}
+	[data-rsi-component-id="platform-component-7"] {
+		order: 3;
+	}
+	[data-rsi-component-id="platform-component-8"] {
+		order: 4;
+	}
 }
 /* REFERRAL PAGE end */
 
