@@ -535,6 +535,9 @@ h3.ShipItem-title br{
 	justify-content: flex-start;
 	width: initial;
 }
+[data-orion-skin] .accountReferralRecruitsModal__navigation, [data-orion-skin].accountReferralRecruitsModal__navigation {
+	justify-content: space-evenly;
+}
 @media only screen and (max-width:500px) {
 	[data-rsi-component-id="platform-component-5"] {
 		order: 1;
@@ -548,9 +551,6 @@ h3.ShipItem-title br{
 	[data-rsi-component-id="platform-component-8"] {
 		order: 4;
 	}
-	[data-orion-skin] .a-stack{
-		gap: 10px;
-	}
 	[data-orion-skin] .a-stack.-vertical.-gap-150.accountReferralRecruitsModal__content{
 		overflow: scroll;
 	}
@@ -559,7 +559,6 @@ h3.ShipItem-title br{
 	}
 	[data-orion-skin] .accountReferralRecruitsModal__navigation, [data-orion-skin].accountReferralRecruitsModal__navigation {
 		margin: 0;
-		justify-content: space-evenly;
 	}
 	[data-orion-skin] .accountReferralRecruitsModal__content, [data-orion-skin].accountReferralRecruitsModal__content {
 		padding: 20px 20px 10px;
