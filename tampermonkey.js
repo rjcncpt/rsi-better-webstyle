@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Star Citizen - Better dark RSI webstyle
 // @namespace      https://github.com/rjcncpt/SpectrumDarkMode
-// @version        2.1.2.8
+// @version        2.1.2.9
 // @description    This Tampermonkey script and Chrome extension changes the appearance of Spectrum and some RSI websites. You must have dark mode enabled.
 // @author         rjcncpt
 // @match          https://robertsspaceindustries.com/*
@@ -95,7 +95,9 @@ style.innerHTML = `
 .app.theme-dark .app-content .quick-access .lobby-member-presences,
 .app.theme-dark .app-content .quick-access .lobby-member-presences .search,
 .theme-dark .app-content>#page.community>#page-main .community-list h3,
-.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu{
+.theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu,
+.o-navigationHead:before,
+.m-breadcrumb{
 	background: #0b111a !important;
 	background-color: #0b111a;
 }
@@ -129,7 +131,6 @@ style.innerHTML = `
 aside.quick-access--open.search-results .search-panel,
 .theme-dark .forum-editor-block.text.focus,
 .theme-dark .l-sidebar__body,
-.theme-dark .breadcrumb,
 .theme-dark .c-annotation-block--thread,
 .theme-dark .sidebar-list .sidebar-item.active,
 .theme-dark button.select,
@@ -137,8 +138,9 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item:hover,
 .theme-dark .list-navigator .widgets .navigation .navigation-content,
 .theme-dark .list-navigator .widgets .navigation .left-triangle:before,
-.theme-dark .list-navigator .bar{
-	background-color: #151f2e;
+.theme-dark .list-navigator .bar,
+.o-navigationBar:before{
+	background-color: #151f2e!important;
 }
 
 .theme-dark .content-block:not(.text) {
@@ -282,7 +284,7 @@ aside.quick-access--open.search-results .search-panel,
 
 /* font-size */
 .quick-access-header .online-count,
-.breadcrumb .trail .breadcrumb-link,
+.m-breadcrumb .trail .m-breadcrumb-link,
 #page.forum-channel .row .column.subject .new-activity-dot,
 .sidebar-list .sidebar-item>.column.notification>.unread-flag,
 .forum-thread-item.style-type-small .content-block.text,
@@ -321,16 +323,16 @@ aside.quick-access--open.search-results .search-panel,
 
 /* Colors */
 .message-item>.content>.bottom .body a,
-[data-orion-skin] .a-breadcrumbItem__link,
-[data-orion-skin].a-breadcrumbItem__link,
+[data-orion-skin] .m-breadcrumbItem__link,
+[data-orion-skin].m-breadcrumbItem__link,
 .c-sidebar-copyright__links a,
 .theme-dark .search-panel .advanced-search,
 .forum-thread-item>.content .content-header>.left>.forum-thread-member-info .member-name span.nickname{
 	color: #5ea9d8;
 }
 .message-item>.content>.bottom .body a:hover,
-[data-orion-skin] .a-breadcrumbItem__link,
-[data-orion-skin].a-breadcrumbItem__link,
+[data-orion-skin] .m-breadcrumbItem__link,
+[data-orion-skin].m-breadcrumbItem__link,
 .c-sidebar-copyright__links a:hover {
 	color: #6bb2db;
 }
@@ -371,8 +373,8 @@ aside.quick-access--open.search-results .search-panel,
 .theme-dark .forum-thread-item>.content .content-header .left .forum-thread-time-created,
 [data-orion-skin] .a-productHomeProductLogo svg,
 [data-orion-skin].a-productHomeProductLogo svg,
-.breadcrumb.mobile-only a.breadcrumb-link,
-.breadcrumb.mobile-only a.breadcrumb-link .separator use,
+.m-breadcrumb.mobile-only a.m-breadcrumb-link,
+.m-breadcrumb.mobile-only a.m-breadcrumb-link .separator use,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .menu button .icon use,
 .theme-dark #notifications .notifications-main .notifications-list .notifications-item .item-actions .action>.icon>use{
@@ -549,7 +551,7 @@ button.vote.vertical,
     border-right: 0;
     margin-right: 0px;
 }
-.breadcrumb.mobile-only a.breadcrumb-link{
+.m-breadcrumb.mobile-only a.m-breadcrumb-link{
 	background: #1d5577;
     border-radius: 5px;
     padding: 5px;
@@ -829,8 +831,9 @@ button.vote.vertical,
 	border-radius: 0px 10px 0 0; /* Radius top right */
 }
 .theme-dark .c-sidebar-navigation-item,
-.theme-dark .c-sidebar-navigation-item a:hover{
-	box-shadow: none;
+.theme-dark .c-sidebar-navigation-item a:hover,
+.o-navigationBar{
+	box-shadow: none!important;
 }
 .app-content>#page.community>#page-main .community-list .community-list-header .community-list-header-actions{
 	margin-right: 0px;
@@ -1451,7 +1454,7 @@ button.bookmark>svg>use,{
 	#page.forum-channel .row{
 		align-items: flex-start;
 	}
-	.app .app-content #page .breadcrumb.mobile-only .trail {
+	.app .app-content #page .m-breadcrumb.mobile-only .trail {
 		border-bottom: 1px solid #1a2638;
 	}
 	.theme-dark #page.forum-channel .row .column.subject .subject-media-preview {
@@ -1529,6 +1532,9 @@ button.bookmark>svg>use,{
 [data-orion-skin] .o-navigationHead,
 [data-orion-skin].o-navigationHead{
 	background: rgb(21 31 46);
+}
+.m-breadcrumb{
+	background-color: #0b111a !important;
 }
 #react {
     border-color: #151f2e;
@@ -2051,6 +2057,17 @@ h3.ShipItem-title br{
 }
 [data-rsi-component-id="platform-component-8"] {
 	order: 4;
+}
+[data-orion-skin] .a-stack.accountReferralRecruitsModal__pagination{
+	display: none;
+}
+[data-orion-skin] .accountReferralRecruitsModal__navigation-button,
+[data-orion-skin].accountReferralRecruitsModal__navigation-button{
+	justify-content: flex-start;
+	width: initial;
+}
+[data-orion-skin] .accountReferralRecruitsModal__navigation, [data-orion-skin].accountReferralRecruitsModal__navigation {
+	justify-content: space-evenly;
 }
 @media only screen and (max-width:500px) {
 	[data-rsi-component-id="platform-component-5"] {
